@@ -18,15 +18,18 @@ class Game:
             self.dam1 = b
             self.dam2 = b
         result = self.dam1 - self.dam2
-        string1 = ['You won ', 'You lost ']
+        string1 = ['You won ', 'You lost ', 'It is a draw, neither of you won the game, please try again!']
         string2 = f'because you damaged {self.dam1} and your enemy {self.dam2}'
         if result > 0:
             return string1[0]+string2
-        else:
+        elif result < 0:
             return string1[1]+string2
+        else:
+            return string1[-1]
     
-
 gamer_chars = ['Hulk', 'Thor', 'Wanda', 'Vision', 'Iron man', 'Superman', 'Batman', 'Flash']
+
+
 gamer = input(f'Please pick a character from this list {gamer_chars}:')
 enemy_chars = [name for name in gamer_chars if name !=gamer]
 enemy = random.choice(enemy_chars)

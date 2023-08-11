@@ -16,18 +16,18 @@ class Stats:
     def median(self):
         a = self.list
         if len(a) % 2 == 0:
-            return int(a[len(a)//2] + a[len(a)//2 -1])/2
+            return int(a[len(a) // 2] + a[len(a) //2 - 1]) / 2
         else:
-            return int(a[len(a)//2])
+            return int(a[len(a) // 2])
          
     def mean(self):
         a = sum(self.list)
         b = len(self.list)
-        return int(a/b)
+        return int(a / b)
 
 list_2 = Stats([100, 90, 150, 250, 200])
 
-rand_iter = random.randint(1,10)
+rand_iter = random.randint(1, 10)
 rand_10_num_list = [random.randint(0, 2000) for _ in range(rand_iter)]
 class_rand = Stats(rand_10_num_list)
 print(list_2.median())
