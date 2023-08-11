@@ -9,15 +9,13 @@ class Game:
         return f'Your choosen character is {gamer}.\nYour enemy is {enemy}.\nYou can have a duel now.\n{Game.damage(self)}'
         
     def damage(self):
-        a = random.randint(50, 100)
-        b = random.randint(25, 50)
-        if (self.pers_1 or self.pers_2) in ['Superman', 'Wanda', 'Thor', 'Hulk']:
 
-            self.dam1 = a
-            self.dam2 = a
+        if (self.pers_1 or self.pers_2) in ['Superman', 'Wanda', 'Thor', 'Hulk']:
+            self.dam1 = random.randint(50, 100)
+            self.dam2 = random.randint(50, 100)
         else:
-            self.dam1 = b
-            self.dam2 = b
+            self.dam1 = random.randint(10, 20)
+            self.dam2 = random.randint(10, 20)
         result = self.dam1 - self.dam2
         str1 = ['You won ', 'You lost ', 'It is a draw, neither of you won the game, please try again!']
         str2 = f'because you damaged {self.dam1} and your enemy {self.dam2}'
