@@ -30,8 +30,8 @@ list_2 = Stats([100, 90, 150, 250, 200])
 rand_iter = random.randint(1, 10)
 rand_10_num_list = [random.randint(0, 2000) for _ in range(rand_iter)]
 class_rand = Stats(rand_10_num_list)
-print(list_2.median())
-print(list_2.min(), list_2.max(), list_2.mean())
+#print(list_2.median())
+#print(list_2.min(), list_2.max(), list_2.mean())
 print(f'''\nThe list including random number of random elements is below: {rand_10_num_list}
 Some stats of the provided data are here as follows:
 

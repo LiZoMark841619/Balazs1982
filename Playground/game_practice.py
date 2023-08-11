@@ -34,7 +34,7 @@ gamer = input(f'Please pick a character from this list {gamer_chars}:')
 enemy_chars = [name for name in gamer_chars if name !=gamer]
 enemy = random.choice(enemy_chars)
 
-game1 = Game(gamer, enemy)
+game1 = [Game(gamer, enemy) for _ in range(10)]
 print(game1)
 
     
