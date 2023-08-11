@@ -1,0 +1,41 @@
+import random
+
+class Game:
+    def __init__(self, pers_1, pers_2):
+        self.pers_1 = pers_1
+        self.pers_2 = pers_2
+        
+    def __repr__(self):
+        return f'Your choosen character is {gamer}.\nYour enemy is {enemy}.\nYou can have duel now.\n{Game.damage(self)}'
+        
+    def damage(self):
+        if (self.pers_1 or self.pers_2) in ['Superman', 'Wanda', 'Thor', 'Hulk']:
+            a = random.randint(50, 100)
+            b = random.randint(25, 50)
+            self.dam1 = a
+            self.dam2 = a
+        else:
+            self.dam1 = b
+            self.dam2 = b
+        result = self.dam1 - self.dam2
+        string1 = ['You won ', 'You lost ']
+        string2 = f'because you damaged {self.dam1} and your enemy {self.dam2}'
+        if result > 0:
+            return string1[0]+string2
+        else:
+            return string1[1]+string2
+    
+
+gamer_chars = ['Hulk', 'Thor', 'Wanda', 'Vision', 'Iron man', 'Superman', 'Batman', 'Flash']
+gamer = input(f'Please pick a character from this list {gamer_chars}:')
+enemy_chars = [name for name in gamer_chars if name !=gamer]
+enemy = random.choice(enemy_chars)
+
+game1 = Game(gamer, enemy)
+print(game1)
+
+    
+    
+        
+    
+    
