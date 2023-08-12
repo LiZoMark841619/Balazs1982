@@ -1,4 +1,6 @@
 import random
+import time
+start = time.time()
 
 class Stats:
     
@@ -40,4 +42,7 @@ Some basic stats of the provided data are here as follows:
 - max: {class_rand.max()}
 - median: {class_rand.median()}
 - mean: {class_rand.mean()}\n''')
-    
+
+end = time.time()
+
+print(f'The program ran in {end - start} seconds')
