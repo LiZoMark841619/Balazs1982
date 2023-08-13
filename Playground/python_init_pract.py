@@ -32,7 +32,7 @@ class Stats:
 #print(list_2.min(), list_2.max(), list_2.mean())
 
 rand_iter = int(input('Please enter the size of a list which will generate random numbers and make some stats of that:'))
-rand_num_list = [random.randint(0, 100000) for _ in range(rand_iter)]
+rand_num_list = [random.randint(0, 1000) for _ in range(rand_iter)]
 class_rand = Stats(rand_num_list)
 
 print(f'''\nThe list including {rand_iter} random elements is below: {rand_num_list}
