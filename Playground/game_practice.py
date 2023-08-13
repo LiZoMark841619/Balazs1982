@@ -42,7 +42,7 @@ print(game1)
 
 end = time.time()
 print(end-start)
-print(help(Game))
+#print(help(Game))
 
     
     
