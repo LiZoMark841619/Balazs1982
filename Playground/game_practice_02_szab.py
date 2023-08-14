@@ -21,31 +21,22 @@ class Superman(Character):
     
 class Game:
     
-    def __init__(self):
+    def __init__(self, player, enemy):
         self.player = False
         self.enemy = False
         
-    def addPlayer(player: Character):
+    def addPlayer(self, player):
         self.player = player
 
-    def addEnemy(enemy:  Character):
+    def addEnemy(self, enemy):
         self.enemy = enemy
     
-gamer_chars = ['Hulk', 'Thor', 'Wanda', 'Vision', 'Iron man', 'Superman', 'Batman', 'Flash']
+gamer_chars = ['Hulk', 'Thor', 'Superman']
 
-
-gamer = input(f'Please pick a character from this list {gamer_chars}:')
-enemy_chars = [name for name in gamer_chars if name !=gamer]
-enemy = random.choice(enemy_chars)
-
-game1 = Game()
-#Some testing
-#print(game1.damage())
+char1 = Hulk().speed
+game1 = Game('Thor', 'Hulk').addEnemy('Hulk')
+print(char1)
 print(game1)
-
-#print(help(Game))
-
-    
     
         
     
