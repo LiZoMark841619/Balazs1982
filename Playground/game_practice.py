@@ -1,6 +1,4 @@
 import random
-import time
-start = time.time()
 
 class Game:
     def __init__(self, pers_1, pers_2):
@@ -37,13 +35,9 @@ enemy = random.choice(enemy_chars)
 
 game1 = Game(gamer, enemy)
 #Some testing
+
 #print(game1.damage())
 print(game1)
-
-end = time.time()
-print(end-start)
-#print(help(Game))
-
     
     
         
