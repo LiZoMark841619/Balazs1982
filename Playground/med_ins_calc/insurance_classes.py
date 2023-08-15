@@ -16,7 +16,7 @@ class Patient:
         estimated_cost = 250 * self._age - 128 * self.sex + 370 * self.bmi + 425 * self.num_of_children + 24000 * self.smoker - 12500
         return int(estimated_cost)
     
-    def update_age(self, new_age: int, force=False):
+    def update_age(self, new_age: int, force=False) -> int:
         if force:
             self._age = new_age
             return self._age

@@ -13,8 +13,10 @@ for i in range(int(input('Please enter the number of patients to be registered:'
 for person in persons:
     print(f"\nPatient {person.name}'s profile information is below: {person.patient_profile()}")
     print(f"The estimated insurance cost is {person.estimated_insurance_cost()} dollars.\n")
-
-print(f'\nThere are {Patient.counter} patients registered.\n')
+if Patient.counter == 1:
+    print(f'\nYou registered {Patient.counter} patient successfully.\n')
+else:
+    print(f'\nYou registered {Patient.counter} patients successfully.\n')
 
 # Selecting one patient to use the update_age and estimated_insurance cost method to see "Inheritence".
 requested_name = input("Enter the patient's name whose age must be updated:\n")
