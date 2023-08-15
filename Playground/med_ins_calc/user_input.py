@@ -20,5 +20,5 @@ print(f'\nThere are {Patient.counter} patients registered.\n')
 requested_name = input("Enter the patient's name whose age must be updated:\n")
 for person in persons:
     if requested_name == person.name:
-        print(f"{person.name}'s updated age is {person.update_age(int(input('Enter current age:')))}.")
+        print(f"{person.name}'s updated age is {person.update_age(int(input('Enter current age:')), force=True)}.")
         print(f"The estimated insurance cost is {person.estimated_insurance_cost()} dollars.")

@@ -5,7 +5,7 @@ class Patient:
 # Making an instantiation method in order to determine the object parameters.
     def __init__(self, name: str, age: int, sex: int, bmi: float, num_of_children: int, smoker: int) -> None:
         self.name = name
-        self.age = age
+        self._age = age
         self.sex = sex
         self.bmi = bmi
         self.num_of_children = num_of_children
@@ -13,12 +13,15 @@ class Patient:
         Patient.counter +=1  
 # Making object methods (how to estimate insurance cost, update age, number of children, bmi, smoking status)
     def estimated_insurance_cost(self) -> float:
-        estimated_cost = 250 * self.age - 128 * self.sex + 370 * self.bmi + 425 * self.num_of_children + 24000 * self.smoker - 12500
+        estimated_cost = 250 * self._age - 128 * self.sex + 370 * self.bmi + 425 * self.num_of_children + 24000 * self.smoker - 12500
         return int(estimated_cost)
     
-    def update_age(self, new_age: int) -> int:
-        self.age = new_age
-        return self.age
+    def update_age(self, new_age: int, force=False):
+        if force:
+            self._age = new_age
+            return self._age
+        else:
+            raise AttributeError("can't set updated age")
     
     def update_num_children(self, new_num_children) -> int:
         self.num_of_children = new_num_children
@@ -27,7 +30,7 @@ class Patient:
     def patient_profile(self) -> dict:
         self.patient_information = {
             'name':self.name,
-            'age':self.age,
+            'age':self._age,
             'sex':self.sex,
             'bmi':self.bmi,
             'number of children':self.num_of_children,
