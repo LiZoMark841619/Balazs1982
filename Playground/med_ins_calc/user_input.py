@@ -11,8 +11,8 @@ for i in range(int(input('Please enter the number of patients to be registered:'
     
 # Traversing persons and print every patient information and insurance cost by using patient_profile and estimated_insurace_cost methods.
 for person in persons:
-    print(f"Patient {person.name}'s profile information is below: {person.patient_profile()}")
-    print(f"The estimated insurance cost is {person.estimated_insurance_cost()} dollars.")
+    print(f"\nPatient {person.name}'s profile information is below: {person.patient_profile()}")
+    print(f"The estimated insurance cost is {person.estimated_insurance_cost()} dollars.\n")
 
 print(f'\nThere are {Patient.counter} patients registered.\n')
 
