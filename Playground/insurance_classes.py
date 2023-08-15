@@ -65,4 +65,10 @@ for i in range(int(input('Please enter the number of patients to be registered:'
 for person in persons:
     person.patient_profile(), person.estimated_insurance_cost()
 
-print(f'\nThere are {Patient.counter} patients registered.')
+print(f'\nThere are {Patient.counter} patients registered.\n')
+
+requested_name = input("Enter the patient's name whose age must be updated:\n")
+for person in persons:
+    if requested_name == person.name:
+        person.update_age(int(input('Enter the new age:')))
+        person.estimated_insurance_cost()
