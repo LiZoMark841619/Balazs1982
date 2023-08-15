@@ -24,7 +24,7 @@ class Patient:
         self.num_of_children = new_num_children
         return self.num_of_children
 
-    def patient_profile(self) -> None:
+    def patient_profile(self) -> dict:
         self.patient_information = {
             'name':self.name,
             'age':self.age,
