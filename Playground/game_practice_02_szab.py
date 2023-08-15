@@ -1,7 +1,7 @@
 import random
 
 class Character:
-    def __init__(self, name : str, power: int, speed: int, life:int):
+    def __init__(self, name, power, speed, life):
         self.name = name
         self.power = power
         self.speed = speed
