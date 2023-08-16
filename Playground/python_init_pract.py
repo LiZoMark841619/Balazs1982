@@ -56,5 +56,5 @@ Some basic stats of the provided data are here as follows:
 
 end = time.time()
 
-print(f'The program ran in {end - start} seconds')
+print(f'The program ran in {end - start} seconds.')
 #print(help(Stats))
