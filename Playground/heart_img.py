@@ -43,4 +43,8 @@ np_array_img = np.array(new_img)
 show_image(np_array_img, 'Sun')
 
 print(np_array_img.shape)
-
+print(heart_img.shape)
+perm_mat_rows = np.eye(7) * heart_img
+show_image(perm_mat_rows, 'Rows-swap')
+perm_mat_columns = heart_img * np.eye(7)
+show_image(perm_mat_columns, 'Columns-swap')
