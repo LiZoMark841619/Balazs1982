@@ -44,7 +44,7 @@ class Patient:
                 self.bmi = float(new_bmi)
                 return self.bmi
             except:
-                print('BMI cannot be string. Please enter a valid (0 for being a non smoker or 1 otherweise) value!')
+                raise TypeError('BMI cannot be string. Please enter a valid (0 for being a non smoker or 1 otherweise) value!')
         
     def update_smoking_status(self, new_status) -> int:
         if new_status in ['Yes', True, 1]:
