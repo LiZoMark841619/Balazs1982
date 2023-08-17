@@ -15,6 +15,7 @@ for i in range(int(input('Please enter the number of patients to be registered:'
 for person in persons:
     print(f"\nPatient {person.name}'s profile information is below: {person.patient_profile()}")
     print(f"The estimated insurance cost is {int(person.estimated_insurance_cost()):,} dollars.\n")
+    
 if Patient.counter == 1:
     print(f'\nYou registered {Patient.counter} patient successfully.\n')
 else:
