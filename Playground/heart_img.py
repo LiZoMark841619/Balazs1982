@@ -1,6 +1,6 @@
 import numpy as np
 import matplotlib.pyplot as plt
-from PIL import Image
+
 
 heart_img = np.array([[255,0,0,255,0,0,255],
               [0,255/2,255/2,0,255/2,255/2,0],
