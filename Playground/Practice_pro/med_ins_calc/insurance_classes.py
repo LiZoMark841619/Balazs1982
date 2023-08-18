@@ -14,12 +14,11 @@ class Patient:
         self.num_of_children = num_of_children
         self.smoker = smoker
         Patient.counter +=1
-          
+
 # Making object methods (how to estimate insurance cost, update age, number of children, bmi, smoking status).
 
     def estimated_insurance_cost(self) -> float:
-        estimated_cost = 250 * self._age - 128 * self.sex + 370 * self.bmi + 425 * self.num_of_children + 24000 * self.smoker - 12500
-        return estimated_cost
+        return 250 * self._age - 128 * self.sex + 370 * self.bmi + 425 * self.num_of_children + 24000 * self.smoker - 12500
     
     def update_age(self, new_age: int, force=False) -> int:
         if force:
