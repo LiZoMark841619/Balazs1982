@@ -22,7 +22,7 @@ class Stats:
             return int(a[len(a) // 2] + a[len(a) //2 - 1]) / 2
         else:
             return int(a[len(a) // 2])
-         
+
     def mean(self) -> float:
         a = sum(self.list)
         b = len(self.list)
@@ -32,14 +32,14 @@ class Stats:
         a = self.list
         modes = {num:a.count(num) for num in a}
         max_value = 1
-        for key, value in modes.items():
+        for value in modes.values():
             if value >= max_value:
                 max_value = value
         for key, value in modes.items():
             if value == max_value:
                 return key, value
     
-rand_iter = int(input('Please enter the size of a list which will generate random numbers and make some stats of that:'))
+rand_iter = 'Please enter the size of a list which will generate random numbers and make some stats of that:'; print(int(input()))
 rand_num_list = [random.randint(0, 1000) for _ in range(rand_iter)]
 class_rand = Stats(rand_num_list)
 
@@ -57,3 +57,7 @@ end = time.time()
 
 print(f'The program ran in {end - start} seconds, in {datetime.now()}')
 #print(help(Stats))
+
+
+
+
