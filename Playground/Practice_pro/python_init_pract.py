@@ -9,12 +9,10 @@ class Stats:
         self.list = sorted(list)
         
     def min(self) -> int:
-        a = self.list
-        return a[0]
+        return self.list[0]
     
     def max(self) -> int:
-        a = self.list
-        return a[-1]
+        return self.list[-1]
         
     def median(self) -> float:
         a = self.list
@@ -24,23 +22,20 @@ class Stats:
             return int(a[len(a) // 2])
 
     def mean(self) -> float:
-        a = sum(self.list)
-        b = len(self.list)
-        return a / b
+        return sum(self.list) // len(self.list)
     
     def mode(self) -> int:
-        a = self.list
-        modes = {num:a.count(num) for num in a}
-        max_value = 1
+        modes = {num:self.list.count(num) for num in self.list}
+        max_value = 0
         for value in modes.values():
-            if value >= max_value:
+            if value > max_value:
                 max_value = value
         for key, value in modes.items():
             if value == max_value:
                 return key, value
     
-rand_iter = 'Please enter the size of a list which will generate random numbers and make some stats of that:'; print(int(input()))
-rand_num_list = [random.randint(0, 1000) for _ in range(rand_iter)]
+rand_iter = int(input('Please enter the size of a list which will generate random numbers and make some stats of that:'))
+rand_num_list = [random.randint(0, 100) for _ in range(rand_iter)]
 class_rand = Stats(rand_num_list)
 
 print(f'''\nThe list including {rand_iter} random elements is below: {rand_num_list}
