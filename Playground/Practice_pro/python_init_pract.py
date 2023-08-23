@@ -27,18 +27,21 @@ class Stats:
     def mode(self) -> int:
         modes = {num:self.list.count(num) for num in self.list}
         max_value = 0
-        for value in modes.values():
+        max_key = 0
+        for key, value in modes.items():
             if value > max_value:
                 max_value = value
-        for key, value in modes.items():
-            if value == max_value:
-                return key, value
+                max_key = key
+        return max_key, max_value
     
 rand_iter = int(input('Please enter the size of a list which will generate random numbers and make some stats of that:'))
-rand_num_list = [random.randint(0, 100) for _ in range(rand_iter)]
-class_rand = Stats(rand_num_list)
+rand_num_list1 = [random.choice([100, 200, 300, 400, 500, 600, 700, 800, 900, 1000]) for _ in range(rand_iter)]
+rand_num_list2 = [random.randrange(100, 2000, 100) for _ in range(rand_iter)]
+rand_num_list3 = [random.randint(1, 10000) for _ in range(rand_iter)]
 
-print(f'''\nThe list including {rand_iter} random elements is below: {rand_num_list}
+class_rand = Stats(rand_num_list2)
+
+print(f'''\nThe list including {rand_iter} random elements is below: {[random.choice(class_rand.list) for _ in range(len(class_rand.list))]}
 Some basic stats of the provided data are here as follows:
 
 - min: {class_rand.min()}
