@@ -34,14 +34,20 @@ class Stats:
                 max_key = key
         return max_key, max_value
     
+    def var(self) -> int:
+        return sum((self.mean() - num)**2 for num in self.list)
+    
+    def std(self) -> float:
+        return self.var()**.5
+        
 rand_iter = int(input('Please enter the size of a list which will generate random numbers and make some stats of that:'))
 rand_num_list1 = [random.choice([100, 200, 300, 400, 500, 600, 700, 800, 900, 1000]) for _ in range(rand_iter)]
 rand_num_list2 = [random.randrange(100, 2000, 100) for _ in range(rand_iter)]
 rand_num_list3 = [random.randint(1, 10000) for _ in range(rand_iter)]
 
-class_rand = Stats(rand_num_list2)
+class_rand = Stats(rand_num_list1)
 
-print(f'''\nThe list including {rand_iter} random elements is below: {[random.choice(class_rand.list) for _ in range(len(class_rand.list))]}
+print(f'''\nThe list including {len(class_rand.list)} random elements is below: {class_rand.list}
 Some basic stats of the provided data are here as follows:
 
 - min: {class_rand.min()}
@@ -49,7 +55,9 @@ Some basic stats of the provided data are here as follows:
 - median: {class_rand.median()}
 - mean: {int(class_rand.mean())}
 - mode: {class_rand.mode()[0]}
-- freq (occurences of mode): {class_rand.mode()[1]}\n''')
+- freq (occurences of mode): {class_rand.mode()[1]}
+- variance: {class_rand.var()}
+- standard deviation: {class_rand.std()}\n''')
 
 end = time.time()
 
