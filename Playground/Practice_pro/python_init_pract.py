@@ -21,7 +21,7 @@ class Stats:
         else:
             return int(a[len(a) // 2])
 
-    def mean(self) -> float:
+    def mean(self) -> int:
         return sum(self.list) // len(self.list)
     
     def mode(self) -> int:
