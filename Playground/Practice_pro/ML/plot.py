@@ -2,9 +2,7 @@ import matplotlib.pyplot as plt
 from mpl_toolkits.mplot3d import Axes3D
 
 def plot_clusters(media_usage, labels):
-"""
-This function plots the clusters for this exercise. This function is in a different file so that script.py is easier to read.
-"""
+
   fig = plt.figure(figsize=(8, 6))
   ax = fig.add_subplot(111, projection='3d')
 
