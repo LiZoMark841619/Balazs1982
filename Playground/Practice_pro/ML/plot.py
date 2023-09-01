@@ -20,4 +20,5 @@ def plot_clusters(media_usage, labels):
   ax.elev = 30
 
   plt.show()
-  return
+
+
