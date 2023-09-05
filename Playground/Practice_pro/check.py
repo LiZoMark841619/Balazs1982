@@ -1,5 +1,6 @@
 class Patient:
-    
+    patient_counter = 0
+
     def __init__(self, name: str, age: int, sex: int, bmi: float, num_child: int, smok_stat: int) -> None:
         
         self.name = name
@@ -8,6 +9,7 @@ class Patient:
         self.bmi = bmi
         self.num_child = num_child
         self.smok_stat = smok_stat
+        patient_counter +=1
 
         
     def ins_cost(self) -> int:
