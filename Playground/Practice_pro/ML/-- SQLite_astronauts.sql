@@ -17,17 +17,17 @@ GROUP BY Name
 ORDER BY Time_in_space_hr DESC
 LIMIT 5;
 
---SELECT Name, Space_Flight_hr,
-    --CASE
-        --WHEN Space_Flight_hr < 1000 THEN "junior"
-        --WHEN Space_Flight_hr < 4000 THEN "medior"
-        --WHEN Space_Flight_hr < 8000 THEN "senior"
-        --WHEN Space_Flight_hr > 8000 THEN "king"
-        --ELSE "other_level"
-    --END as "Levels"
---FROM astronauts;
+SELECT Name, Space_Flight_hr,
+    CASE
+        WHEN Space_Flight_hr < 1000 THEN "junior"
+        WHEN Space_Flight_hr < 4000 THEN "medior"
+        WHEN Space_Flight_hr < 8000 THEN "senior"
+        WHEN Space_Flight_hr > 8000 THEN "king"
+        ELSE "other_level"
+    END as "Levels"
+FROM astronauts;
 
-SELECT COUNT(*),
+SELECT COUNT(*) AS Total,
     CASE
         WHEN Space_Flight_hr < 1000 THEN "junior"
         WHEN Space_Flight_hr < 4000 THEN "medior"
@@ -37,7 +37,6 @@ SELECT COUNT(*),
     END as "Levels"
 FROM astronauts
 GROUP BY Levels;
-
 
 SELECT Name, Gender, Space_Walks, Space_Walks_hr AS Space_walks_hr
 FROM astronauts
