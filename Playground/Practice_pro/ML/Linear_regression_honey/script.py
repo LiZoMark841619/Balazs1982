@@ -2,7 +2,7 @@ import pandas as pd
 import numpy as np 
 import seaborn as sns
 import matplotlib.pyplot as plt  
-from sklear.linear_model import LinearRegression
+from sklearn.linear_model import LinearRegression
 
 df = pd.read_csv("honey.csv")
 print(df.head())
