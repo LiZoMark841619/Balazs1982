@@ -43,7 +43,7 @@ class Patient:
         return self.smoker
 
 
-persons = [Patient(input('Name:'), int(input('Age:')), input('Sex:'), float(input('BMI:')), int(input('Number of children')), int(input('Smoker status:')))
+persons = [Patient(input('Name:'), int(input('Age:')), input('Sex:'), float(input('BMI:')), int(input('Number of children: ')), int(input('Smoker status:')))
 for _ in range(int(input('Number of patients to be registered:')))]
 
 for patient in persons:
