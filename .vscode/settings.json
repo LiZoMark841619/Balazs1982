@@ -2,5 +2,8 @@
     "cSpell.words": [
         "sklearn"
     ],
-    "julia.environmentPath": "c:\\Users\\stank\\OneDrive\\Dokumentumok\\GitHub\\Balazs1982"
+    "julia.environmentPath": "c:\\Users\\stank\\OneDrive\\Dokumentumok\\GitHub\\Balazs1982",
+    "python.analysis.extraPaths": [
+        "./Playground/Practice_pro"
+    ]
 }
