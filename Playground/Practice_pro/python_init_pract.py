@@ -5,7 +5,7 @@ start = time.time()
 
 class Stats:
     
-    def __init__(self, list) -> None:
+    def __init__(self, list: list) -> None:
         self.list = sorted(list)
         
     def min(self) -> int:
@@ -17,9 +17,9 @@ class Stats:
     def median(self) -> float:
         a = self.list
         if len(a) % 2 == 0:
-            return int(a[len(a) // 2] + a[len(a) //2 - 1]) / 2
+            return (a[len(a) // 2] + a[len(a) //2 - 1]) / 2
         else:
-            return int(a[len(a) // 2])
+            return a[len(a) // 2]
 
     def mean(self) -> int:
         return sum(self.list) // len(self.list)
