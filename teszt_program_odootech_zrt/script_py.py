@@ -1,2 +1,2 @@
 import import_ipynb
-import script
+import script_v1
