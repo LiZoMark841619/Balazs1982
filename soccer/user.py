@@ -1,5 +1,5 @@
 import import_ipynb
-import model 
+from model import df_22_24, prediction
 
 days = ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday']
 day = input(f'Enter the day from these options -> {days} when the match will be played: ')
