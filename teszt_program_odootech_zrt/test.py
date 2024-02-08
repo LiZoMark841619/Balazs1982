@@ -8,10 +8,18 @@ from pathlib import Path
 def content(parent='current working directory'):
     
     '''
-    This method does not require a parent directory as attribute, because its default directory is the current working directory.
+    This method does not require a parent directory as argumentum, because its default directory is the current working directory.
     The default value is a method which returns to the current WindowsPath directly, and the result of the content method is 
     a return value of one dictionary with directories as keys and every subfolder and file as values.
     '''
+    
+def read_files(dirs='directories'):
+    
+    '''
+    This method requires the content() object's result and generate the open() objects by using the yield statement and the read() method.
+    So the returned values are the data from every file in every folder under the parent directory.
+    '''
+    
 class Jarmu:
     '''
     This is a parent class of auto and
@@ -63,6 +71,7 @@ class bicikli(Jarmu):
         return {'type':'bicikli', 'terhelhetoseg':self.terhelhetoseg, 'marka':self.marka}
 
 pydoc.writedoc('test')
+
 
 
 
