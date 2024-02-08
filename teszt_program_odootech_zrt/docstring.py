@@ -14,15 +14,3 @@ def content(parent='current working directory'):
     '''
     
     return {root:(dir, file) for root, dir, file in os.walk(top=parent, topdown=False)}
-
-def read_files(dirs: dict) -> list:
-    
-    '''
-    Practicing
-    '''
-    for key in dirs:
-        for file in dirs[key][1]:
-            if '.dat' in file:
-                yield open(key+'\\'+file).read()
-
-pydoc.writedoc('docstring')
