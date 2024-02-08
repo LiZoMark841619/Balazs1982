@@ -22,6 +22,134 @@
 </td><td class="multicolumn"><a href="random.html">random</a><br>
 </td></tr></table></td></tr></table><p>
 <table class="section">
+<tr class="decor index-decor heading-text">
+<td class="section-title" colspan=3>&nbsp;<br><strong class="bigsection">Classes</strong></td></tr>
+    
+<tr><td class="decor index-decor"><span class="code">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></td><td>&nbsp;</td>
+<td class="singlecolumn"><dl>
+<dt class="heading-text"><a href="builtins.html#object">builtins.object</a>
+</dt><dd>
+<dl>
+<dt class="heading-text"><a href="test.html#Jarmu">Jarmu</a>
+</dt><dd>
+<dl>
+<dt class="heading-text"><a href="test.html#auto">auto</a>
+</dt><dt class="heading-text"><a href="test.html#bicikli">bicikli</a>
+</dt></dl>
+</dd>
+</dl>
+</dd>
+</dl>
+ <p>
+<table class="section">
+<tr class="decor title-decor heading-text">
+<td class="section-title" colspan=3>&nbsp;<br><a name="Jarmu">class <strong>Jarmu</strong></a>(<a href="builtins.html#object">builtins.object</a>)</td></tr>
+    
+<tr><td class="decor title-decor" rowspan=2><span class="code">&nbsp;&nbsp;&nbsp;</span></td>
+<td class="decor title-decor" colspan=2><span class="code"><a href="#Jarmu">Jarmu</a>(type:&nbsp;str)&nbsp;-&amp;gt;&nbsp;None<br>
+&nbsp;<br>
+This&nbsp;is&nbsp;a&nbsp;parent&nbsp;class&nbsp;of&nbsp;<a href="#auto">auto</a>&nbsp;and<br>
+<a href="#bicikli">bicikli</a>&nbsp;subclasses.&nbsp;It&nbsp;is&nbsp;instantiated&nbsp;by<br>
+type&nbsp;(<a href="#auto">auto</a>&nbsp;or&nbsp;<a href="#bicikli">bicikli</a>)&nbsp;and&nbsp;the&nbsp;counter<br>
+increases&nbsp;everytime&nbsp;an&nbsp;<a href="builtins.html#object">object</a>&nbsp;is&nbsp;being&nbsp;created.<br>&nbsp;</span></td></tr>
+<tr><td>&nbsp;</td>
+<td class="singlecolumn">Methods defined here:<br>
+<dl><dt><a name="Jarmu-__init__"><strong>__init__</strong></a>(self, type: str) -&gt; None</dt><dd><span class="code">Initialize&nbsp;self.&nbsp;&nbsp;See&nbsp;help(type(self))&nbsp;for&nbsp;accurate&nbsp;signature.</span></dd></dl>
+
+<hr>
+Data descriptors defined here:<br>
+<dl><dt><strong>__dict__</strong></dt>
+<dd><span class="code">dictionary&nbsp;for&nbsp;instance&nbsp;variables&nbsp;(if&nbsp;defined)</span></dd>
+</dl>
+<dl><dt><strong>__weakref__</strong></dt>
+<dd><span class="code">list&nbsp;of&nbsp;weak&nbsp;references&nbsp;to&nbsp;the&nbsp;object&nbsp;(if&nbsp;defined)</span></dd>
+</dl>
+<hr>
+Data and other attributes defined here:<br>
+<dl><dt><strong>registered_vehicle</strong> = 0</dl>
+
+</td></tr></table> <p>
+<table class="section">
+<tr class="decor title-decor heading-text">
+<td class="section-title" colspan=3>&nbsp;<br><a name="auto">class <strong>auto</strong></a>(<a href="test.html#Jarmu">Jarmu</a>)</td></tr>
+    
+<tr><td class="decor title-decor" rowspan=2><span class="code">&nbsp;&nbsp;&nbsp;</span></td>
+<td class="decor title-decor" colspan=2><span class="code"><a href="#auto">auto</a>(ajtok_szama:&nbsp;int,&nbsp;marka:&nbsp;str)&nbsp;-&amp;gt;&nbsp;None<br>
+&nbsp;<br>
+This&nbsp;is&nbsp;a&nbsp;subclass&nbsp;of&nbsp;<a href="#Jarmu">Jarmu</a>&nbsp;parent&nbsp;class.<br>
+It&nbsp;is&nbsp;instantiated&nbsp;by&nbsp;ajtok_szama&nbsp;and&nbsp;marka.<br>
+The&nbsp;counter&nbsp;of&nbsp;<a href="#auto">auto</a>&nbsp;and&nbsp;<a href="#Jarmu">Jarmu</a>&nbsp;increases&nbsp;everytime<br>
+the&nbsp;<a href="builtins.html#object">object</a>&nbsp;is&nbsp;created.<br>&nbsp;</span></td></tr>
+<tr><td>&nbsp;</td>
+<td class="singlecolumn"><dl><dt>Method resolution order:</dt>
+<dd><a href="test.html#auto">auto</a></dd>
+<dd><a href="test.html#Jarmu">Jarmu</a></dd>
+<dd><a href="builtins.html#object">builtins.object</a></dd>
+</dl>
+<hr>
+Methods defined here:<br>
+<dl><dt><a name="auto-__init__"><strong>__init__</strong></a>(self, ajtok_szama: int, marka: str) -&gt; None</dt><dd><span class="code">Initialize&nbsp;self.&nbsp;&nbsp;See&nbsp;help(type(self))&nbsp;for&nbsp;accurate&nbsp;signature.</span></dd></dl>
+
+<dl><dt><a name="auto-vehicle_data"><strong>vehicle_data</strong></a>(self) -&gt; dict</dt></dl>
+
+<hr>
+Data and other attributes defined here:<br>
+<dl><dt><strong>count</strong> = 0</dl>
+
+<hr>
+Data descriptors inherited from <a href="test.html#Jarmu">Jarmu</a>:<br>
+<dl><dt><strong>__dict__</strong></dt>
+<dd><span class="code">dictionary&nbsp;for&nbsp;instance&nbsp;variables&nbsp;(if&nbsp;defined)</span></dd>
+</dl>
+<dl><dt><strong>__weakref__</strong></dt>
+<dd><span class="code">list&nbsp;of&nbsp;weak&nbsp;references&nbsp;to&nbsp;the&nbsp;object&nbsp;(if&nbsp;defined)</span></dd>
+</dl>
+<hr>
+Data and other attributes inherited from <a href="test.html#Jarmu">Jarmu</a>:<br>
+<dl><dt><strong>registered_vehicle</strong> = 0</dl>
+
+</td></tr></table> <p>
+<table class="section">
+<tr class="decor title-decor heading-text">
+<td class="section-title" colspan=3>&nbsp;<br><a name="bicikli">class <strong>bicikli</strong></a>(<a href="test.html#Jarmu">Jarmu</a>)</td></tr>
+    
+<tr><td class="decor title-decor" rowspan=2><span class="code">&nbsp;&nbsp;&nbsp;</span></td>
+<td class="decor title-decor" colspan=2><span class="code"><a href="#bicikli">bicikli</a>(terhelhetoseg:&nbsp;int,&nbsp;marka:&nbsp;str)&nbsp;-&amp;gt;&nbsp;None<br>
+&nbsp;<br>
+This&nbsp;is&nbsp;a&nbsp;subclass&nbsp;of&nbsp;<a href="#Jarmu">Jarmu</a>&nbsp;parent&nbsp;class.<br>
+It&nbsp;is&nbsp;instantiated&nbsp;by&nbsp;terhelhetoseg&nbsp;and&nbsp;marka.<br>
+The&nbsp;counter&nbsp;of&nbsp;<a href="#bicikli">bicikli</a>&nbsp;and&nbsp;<a href="#Jarmu">Jarmu</a>&nbsp;increases&nbsp;everytime<br>
+the&nbsp;<a href="builtins.html#object">object</a>&nbsp;is&nbsp;created.<br>&nbsp;</span></td></tr>
+<tr><td>&nbsp;</td>
+<td class="singlecolumn"><dl><dt>Method resolution order:</dt>
+<dd><a href="test.html#bicikli">bicikli</a></dd>
+<dd><a href="test.html#Jarmu">Jarmu</a></dd>
+<dd><a href="builtins.html#object">builtins.object</a></dd>
+</dl>
+<hr>
+Methods defined here:<br>
+<dl><dt><a name="bicikli-__init__"><strong>__init__</strong></a>(self, terhelhetoseg: int, marka: str) -&gt; None</dt><dd><span class="code">Initialize&nbsp;self.&nbsp;&nbsp;See&nbsp;help(type(self))&nbsp;for&nbsp;accurate&nbsp;signature.</span></dd></dl>
+
+<dl><dt><a name="bicikli-vehicle_data"><strong>vehicle_data</strong></a>(self) -&gt; dict</dt></dl>
+
+<hr>
+Data and other attributes defined here:<br>
+<dl><dt><strong>count</strong> = 0</dl>
+
+<hr>
+Data descriptors inherited from <a href="test.html#Jarmu">Jarmu</a>:<br>
+<dl><dt><strong>__dict__</strong></dt>
+<dd><span class="code">dictionary&nbsp;for&nbsp;instance&nbsp;variables&nbsp;(if&nbsp;defined)</span></dd>
+</dl>
+<dl><dt><strong>__weakref__</strong></dt>
+<dd><span class="code">list&nbsp;of&nbsp;weak&nbsp;references&nbsp;to&nbsp;the&nbsp;object&nbsp;(if&nbsp;defined)</span></dd>
+</dl>
+<hr>
+Data and other attributes inherited from <a href="test.html#Jarmu">Jarmu</a>:<br>
+<dl><dt><strong>registered_vehicle</strong> = 0</dl>
+
+</td></tr></table></td></tr></table><p>
+<table class="section">
 <tr class="decor functions-decor heading-text">
 <td class="section-title" colspan=3>&nbsp;<br><strong class="bigsection">Functions</strong></td></tr>
     
