@@ -14,3 +14,6 @@ def content(parent='current working directory'):
     '''
     
     return {root:(dir, file) for root, dir, file in os.walk(top=parent, topdown=False)}
+pydoc.writedoc('test')
+
+
