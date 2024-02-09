@@ -57,7 +57,7 @@ class auto(Jarmu):
 class bicikli(Jarmu):
     '''
     This is a subclass of Jarmu parent class.
-    It is instantiated by terhelhetoseg and marka.
+    It is instantiated by type, marka and terhelhetoseg.
     The counter of bicikli and Jarmu increases everytime
     the object is created.
     '''
