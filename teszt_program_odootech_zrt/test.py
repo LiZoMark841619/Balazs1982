@@ -29,8 +29,9 @@ class Jarmu:
     '''
     registered_vehicle = 0
     
-    def __init__(self, type: str) -> None:
+    def __init__(self, type: str, marka: str) -> None:
         self.type = type
+        self.marka = marka
         
 class auto(Jarmu):
     '''
@@ -41,10 +42,9 @@ class auto(Jarmu):
     '''
     count = 0
     
-    def __init__(self, ajtok_szama: int, marka: str) -> None:
-        super().__init__(type)
+    def __init__(self, type: str, marka: str, ajtok_szama: int) -> None:
+        super().__init__(type, marka)
         self.ajtok_szama = ajtok_szama
-        self.marka = marka
         auto.count += 1
         Jarmu.registered_vehicle += 1
             
@@ -60,10 +60,9 @@ class bicikli(Jarmu):
     '''
     count = 0 
     
-    def __init__(self, terhelhetoseg: int, marka: str) -> None:
-        super().__init__(type)
+    def __init__(self, type: str, marka: str, terhelhetoseg: int) -> None:
+        super().__init__(type, marka)
         self.terhelhetoseg = terhelhetoseg
-        self.marka = marka
         bicikli.count +=1
         Jarmu.registered_vehicle +=1
     
@@ -71,6 +70,7 @@ class bicikli(Jarmu):
         return {'type':'bicikli', 'terhelhetoseg':self.terhelhetoseg, 'marka':self.marka}
 
 pydoc.writedoc('test')
+
 
 
 
