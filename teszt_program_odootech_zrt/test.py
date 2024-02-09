@@ -24,7 +24,7 @@ class Jarmu:
     '''
     This is a parent class of auto and
     bicikli subclasses. It is instantiated by
-    type (auto or bicikli) and the counter
+    type (auto or bicikli) and marka (anything) and the counter
     increases everytime an object is being created.
     '''
     company_vehicles = 0
@@ -42,13 +42,13 @@ class Jarmu:
 class auto(Jarmu):
     '''
     This is a subclass of Jarmu parent class.
-    It is instantiated by ajtok_szama and marka.
+    It is instantiated by type, marka and ajtok_szama.
     The counter of auto and Jarmu increases everytime
     the object is created.
     '''
     count = 0
     
-    def __init__(self, type:str, marka: str, ajtok_szama: int) -> None:
+    def __init__(self, type: str, marka: str, ajtok_szama: int) -> None:
         super().__init__(type, marka)
         self.ajtok_szama = ajtok_szama
         auto.count += 1
@@ -63,7 +63,7 @@ class bicikli(Jarmu):
     '''
     count = 0 
     
-    def __init__(self, type:str, marka:str, terhelhetoseg: int) -> None:
+    def __init__(self, type: str, marka: str, terhelhetoseg: int) -> None:
         super().__init__(type, marka)
         self.terhelhetoseg = terhelhetoseg
         bicikli.count +=1
