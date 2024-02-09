@@ -27,7 +27,7 @@ class Jarmu:
     type (auto or bicikli) and the counter
     increases everytime an object is being created.
     '''
-    registered_vehicle = 0
+    company_vehicles = 0
     
     def __init__(self, type: str, marka: str) -> None:
         self.type = type
@@ -46,10 +46,10 @@ class auto(Jarmu):
         super().__init__(type, marka)
         self.ajtok_szama = ajtok_szama
         auto.count += 1
-        Jarmu.registered_vehicle += 1
+        Jarmu.company_vehicles += 1
             
     def vehicle_data(self) -> dict:
-        return {'type':'auto', 'ajtok_szama':self.ajtok_szama, 'marka':self.marka}
+        return {'type':self.type, 'ajtok_szama':self.ajtok_szama, 'marka':self.marka}
     
 class bicikli(Jarmu):
     '''
@@ -64,12 +64,14 @@ class bicikli(Jarmu):
         super().__init__(type, marka)
         self.terhelhetoseg = terhelhetoseg
         bicikli.count +=1
-        Jarmu.registered_vehicle +=1
+        Jarmu.company_vehicles +=1
     
     def vehicle_data(self) -> dict:
-        return {'type':'bicikli', 'terhelhetoseg':self.terhelhetoseg, 'marka':self.marka}
+        return {'type':self.type, 'terhelhetoseg':self.terhelhetoseg, 'marka':self.marka}
 
 pydoc.writedoc('test')
+
+
 
 
 
