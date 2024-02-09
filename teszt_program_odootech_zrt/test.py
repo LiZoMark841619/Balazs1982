@@ -2,8 +2,8 @@ import pydoc
 import os
 import random
 import pickle
-from pathlib import Path 
-
+from pathlib import Path
+import datetime
 
 def content(parent='current working directory'):
     
@@ -33,6 +33,11 @@ class Jarmu:
         self.type = type
         self.marka = marka
         
+    @staticmethod
+    def day_of_registration():
+        days = ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday']
+        D = {k:v for k,v in zip(range(1,8), days)}
+        return D[datetime.datetime.now().isoweekday()]
 class auto(Jarmu):
     '''
     This is a subclass of Jarmu parent class.
@@ -47,10 +52,7 @@ class auto(Jarmu):
         self.ajtok_szama = ajtok_szama
         auto.count += 1
         Jarmu.company_vehicles += 1
-            
-    def vehicle_data(self) -> dict:
-        return {'type':self.type, 'ajtok_szama':self.ajtok_szama, 'marka':self.marka}
-    
+        
 class bicikli(Jarmu):
     '''
     This is a subclass of Jarmu parent class.
@@ -65,11 +67,10 @@ class bicikli(Jarmu):
         self.terhelhetoseg = terhelhetoseg
         bicikli.count +=1
         Jarmu.company_vehicles +=1
-    
-    def vehicle_data(self) -> dict:
-        return {'type':self.type, 'terhelhetoseg':self.terhelhetoseg, 'marka':self.marka}
 
 pydoc.writedoc('test')
+
+
 
 
 
