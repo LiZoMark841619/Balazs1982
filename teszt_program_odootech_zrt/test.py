@@ -42,7 +42,7 @@ class auto(Jarmu):
     '''
     count = 0
     
-    def __init__(self, type: str, marka: str, ajtok_szama: int) -> None:
+    def __init__(self, type:str, marka: str, ajtok_szama: int) -> None:
         super().__init__(type, marka)
         self.ajtok_szama = ajtok_szama
         auto.count += 1
@@ -60,7 +60,7 @@ class bicikli(Jarmu):
     '''
     count = 0 
     
-    def __init__(self, type: str, marka: str, terhelhetoseg: int) -> None:
+    def __init__(self, type:str, marka:str, terhelhetoseg: int) -> None:
         super().__init__(type, marka)
         self.terhelhetoseg = terhelhetoseg
         bicikli.count +=1
