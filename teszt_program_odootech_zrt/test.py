@@ -38,6 +38,7 @@ class Jarmu:
         days = ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday']
         D = {k:v for k,v in zip(range(1,8), days)}
         return D[datetime.datetime.now().isoweekday()]
+    
 class auto(Jarmu):
     '''
     This is a subclass of Jarmu parent class.
