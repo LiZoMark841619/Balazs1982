@@ -1,8 +1,8 @@
-import timeit
+import time
 repslist = range(1000)
 def timer(func, *pargs, **kargs):
-    start = timeit.timeit()
+    start = time.time()
     for _ in repslist:
         ret = func(*pargs, **kargs)
-    elapsed = timeit.timeit() - start
+    elapsed = time.time() - start
     return (elapsed, ret)
