@@ -1,9 +1,9 @@
 import pydoc
 import os
-import random
 import pickle
 from pathlib import Path
 import datetime
+import time
 
 def content(parent='current working directory'):
     
