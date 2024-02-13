@@ -7,7 +7,8 @@
 #     elapsed = time.time() - start
 #     return (elapsed, ret)
 
-import time, sys
+import time
+import sys
 trace = lambda *args: None # or print
 timefunc = time.time
 def timer(func, *pargs, _reps=1000, **kargs):
