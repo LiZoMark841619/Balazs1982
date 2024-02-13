@@ -5,4 +5,4 @@ def timer(func, *pargs, **kargs):
     for _ in repslist:
         ret = func(*pargs, **kargs)
     elapsed = timeit.timeit() - start
-    return elapsed
+    return (elapsed, ret)
