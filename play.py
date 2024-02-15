@@ -58,7 +58,7 @@ print(new_add(a=1, b=2, c=3))
 
 def CopyDict(old_dict):
     new_dict = {key: old_dict[key] for key in old_dict}
-    return new_dict, old_dict
+    return new_dict
 
 print(CopyDict(feats))
 
@@ -72,10 +72,29 @@ print(CopyDictAlter(alphabet))
 
 
 # Exercise 6
-import random
 def addDict(one, two):
-    D = {key:one[key] for key in one} | {key: two[key] if key not in one else random.choice([one[key], two[key]]) for key in two}
+    D = {key:one[key] for key in one} | {key: two[key] if key not in one else [one[key], two[key]] for key in two}
     return D
 
 print(addDict({'a':1, 'b':2, 'c':3}, {'a':2, 'd':4}))
-print(random.choice([feats['age'], feats['sex']]))
+
+# Exercise 7
+def f1(a, b): return a, b
+print(f1(1, 2))
+print(f1(b=2, a=1))
+
+def f2(a, *b): return a, b
+print(f2(1, 2, 3))
+
+def f3(a, **b): return a, b
+print(f3(1, x=2, y=3))
+
+def f4(a, *b, **c): return a, b, c
+print(f4(1, 2, 3, x=2, y=3))
+
+def f5(a, b=2, c=3): return a, b, c
+print(f5(1, 4))
+
+def f6(a, b=2, *c): return a, b, c
+print(f6(1, 4, 5, 6))
+
