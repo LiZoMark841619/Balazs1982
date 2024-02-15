@@ -98,3 +98,12 @@ print(f5(1, 4))
 def f6(a, b=2, *c): return a, b, c
 print(f6(1, 4, 5, 6))
 
+y = 15
+x = y // 2 # For some y > 1
+while x > 1:
+    if y % x == 0: # Remainder
+        print(y, 'has factor', x)
+        break # Skip else
+    x -= 1
+else: # Normal exit
+    print(y, 'is prime')
