@@ -98,12 +98,47 @@ print(f5(1, 4))
 def f6(a, b=2, *c): return a, b, c
 print(f6(1, 4, 5, 6))
 
-y = 15
-x = y // 2 # For some y > 1
+y = 15.0
+x = y // 2 
 while x > 1:
-    if y % x == 0: # Remainder
+    if y % x == 0:
         print(y, 'has factor', x)
         break # Skip else
     x -= 1
 else: # Normal exit
     print(y, 'is prime')
+
+def foorLoop(L = None):  # sourcery skip: list-comprehension
+    if L is None: L = [2, 4, 9, 16, 25]
+    new_L = []
+    for value in L:
+        new_L.append(value**.5)
+    return new_L
+print(foorLoop())
+print(foorLoop([400, 100, 64, 36]))
+
+def mapCall(L = None):
+    if L is None: L = [2, 4, 9, 16, 25]
+    return list(map(pow, L, [0.5]*len(L)))
+
+print(mapCall())
+print(mapCall([400, 100, 64, 36]))
+
+
+def ListCompr(L = None):
+    if L is None: L = [2, 4, 9, 16, 25]
+    return [value**0.5 for value in L]
+
+print(ListCompr())
+print(ListCompr([400, 100, 64, 36]))
+
+import math
+
+f = lambda x: math.sqrt(x)
+new_L = map(f, [2, 4, 9, 16, 25])
+
+print(next(new_L))
+print(next(new_L))
+print(next(new_L))
+
+        
