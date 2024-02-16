@@ -30,19 +30,17 @@ def someargs(*args):
         total += next
     return total
 
-print('Args add: ', someargs(1, 2, 3, 4), someargs('apple', 'lemon'), someargs([1, 2, 3], [5, 10], [30, 40, 10, 10, 40]), someargs(feats))
+print('Args add: ', someargs(1, 2, 3, 4), someargs('apple', 'lemon'))
+print(someargs([1, 2, 3], [5, 10], [30, 40, 10, 10, 40]), someargs(feats))
         
 # Exercise 4/1
 def adder_defs(good=10, bad=20, ugly=30):
     return good + bad + ugly
 
-zero = adder_defs()
-one = adder_defs(20)
-two = adder_defs(20, 30)
-three = adder_defs(20, 30, 50)
+zero, one = adder_defs(), adder_defs(20)
+two, three = adder_defs(20, 30), adder_defs(20, 30, 50)
 
 print(zero, one, two, three)
-print(adder_defs(ugly=1, bad=1))
 
 # Exercise 4/2
 def new_add(**args):
@@ -108,18 +106,18 @@ while x > 1:
 else: # Normal exit
     print(y, 'is prime')
 
-def foorLoop(L = None):  # sourcery skip: list-comprehension
+def forLoop(L = None):  # sourcery skip: list-comprehension
     if L is None: L = [2, 4, 9, 16, 25]
     new_L = []
     for value in L:
         new_L.append(value**.5)
     return new_L
-print(foorLoop())
-print(foorLoop([400, 100, 64, 36]))
+print(forLoop())
+print(forLoop([400, 100, 64, 36]))
 
 def mapCall(L = None):
     if L is None: L = [2, 4, 9, 16, 25]
-    return list(map(pow, L, [0.5]*len(L)))
+    return list(map(pow, L, [.5]*len(L)))
 
 print(mapCall())
 print(mapCall([400, 100, 64, 36]))
@@ -127,7 +125,7 @@ print(mapCall([400, 100, 64, 36]))
 
 def ListCompr(L = None):
     if L is None: L = [2, 4, 9, 16, 25]
-    return [value**0.5 for value in L]
+    return [value**.5 for value in L]
 
 print(ListCompr())
 print(ListCompr([400, 100, 64, 36]))
@@ -143,5 +141,9 @@ print(next(new_L))
 
 from runtime import timer, best
 
-
-        
+for test in [forLoop, ListCompr, mapCall]:
+    one, two = timer(test)
+    three, four = best(test)
+    print('--'*33)
+    print(f'Time\n{test.__name__} => {one} => {two}')
+    print(f'Best time\n{test.__name__} => {three} => {four}')        
