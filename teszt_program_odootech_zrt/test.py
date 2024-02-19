@@ -3,7 +3,7 @@ import os
 import pickle
 from pathlib import Path
 import datetime
-from teszt_program_odootech_zrt.runtime import timer
+import runtime
 
 def content(parent='current working directory'):
     
@@ -70,6 +70,7 @@ class bicikli(Jarmu):
         Jarmu.company_vehicles +=1
 
 pydoc.writedoc('test')
+
 
 
 
