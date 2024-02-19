@@ -139,7 +139,7 @@ print(next(new_L))
 print(next(new_L))
 print(next(new_L))
 
-from runtime import timer, best
+from teszt_program_odootech_zrt.runtime import timer, best
 
 for test in [forLoop, ListCompr, mapCall]:
     one, two = timer(test)

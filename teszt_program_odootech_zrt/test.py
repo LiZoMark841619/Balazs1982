@@ -3,7 +3,7 @@ import os
 import pickle
 from pathlib import Path
 import datetime
-from runtime import timer
+from teszt_program_odootech_zrt.runtime import timer
 
 def content(parent='current working directory'):
     
