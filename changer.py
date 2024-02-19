@@ -1,4 +1,4 @@
-message = 'First version'
+message = 'Second message is'
 
 def printer():
-    print(message)
+    print('After reloading: ', message)
