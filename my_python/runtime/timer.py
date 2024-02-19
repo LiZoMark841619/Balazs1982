@@ -15,3 +15,4 @@ def best(func, *pargs, _reps=50, **kargs):
         (time, ret) = timer(func, *pargs, _reps=1, **kargs)
         if time < best: best = time
     return (best, ret)
+print('in runtime.py')
