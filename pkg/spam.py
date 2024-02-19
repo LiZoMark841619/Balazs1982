@@ -1,2 +1,2 @@
-from . import eggs
-print(eggs.X)
+from . import string
+print(string)

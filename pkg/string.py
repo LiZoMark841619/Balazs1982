@@ -1,0 +1,1 @@
+print("NiNi"*8)
