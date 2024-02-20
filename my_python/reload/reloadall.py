@@ -22,7 +22,7 @@ def reload_all(*args):
             transitive_reload(arg, visited)
             
 if __name__ == '__main__':
-    import reload_all
-    reload_all(reload_all)
+    import reloadall
+    reload_all(reloadall)
         
     
