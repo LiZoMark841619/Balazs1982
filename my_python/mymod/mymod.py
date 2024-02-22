@@ -14,7 +14,7 @@ if __name__=='__main__':
 def countLinesChars(file):
     with open(file, encoding='utf') as F:
         L = F.readlines()
-        D = {i:len(L[i]) for i in range(len(L))}
-        return {'file': file.split('\\')[-1], 'Lines': len(L), 'Chars':D}
+        D = {i+1:len(L[i]) for i in range(len(L))}
+        return {'file': file.split('\\')[-1], 'Line:chars':D}
 if __name__=='__main__':
     print(countLinesChars('mymod.py'))
