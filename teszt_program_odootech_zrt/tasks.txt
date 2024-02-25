@@ -1,0 +1,12 @@
+Write a simple program with two functions in object orientation.
+Expectation: Be sure to use object orientation!
+
+Function 1:
+- read the data in the files in the data folder (and any subfolders) (sample folder included)
+- every file contains a JSON data structure, the ID is the name of the file
+- based on the type, instantiate the appropriate transport type (only the two types you see are possible)
+- put the received object into a list
+- on the go, log on the screen that the program is running and working (no need for an hourglass or anything like that, just a simple signal)
+
+Function 2:
+- write the elements in the list returned by the first function to the screen in a nicely formatted way

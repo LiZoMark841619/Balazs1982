@@ -19,8 +19,8 @@
 <td class="singlecolumn"><table><tr><td class="multicolumn"><a href="datetime.html">datetime</a><br>
 <a href="os.html">os</a><br>
 </td><td class="multicolumn"><a href="pathlib.html">pathlib</a><br>
-<a href="pickle.html">pickle</a><br>
-</td><td class="multicolumn"><a href="pydoc.html">pydoc</a><br>
+<a href="pydoc.html">pydoc</a><br>
+</td><td class="multicolumn"><a href="sys.html">sys</a><br>
 <a href="my_python.runtime.timer.html">my_python.runtime.timer</a><br>
 </td><td class="multicolumn"></td></tr></table></td></tr></table><p>
 <table class="section">
@@ -75,6 +75,8 @@ Data descriptors defined here:<br>
 Data and other attributes defined here:<br>
 <dl><dt><strong>company_vehicles</strong> = 0</dl>
 
+<dl><dt><strong>reg_dates</strong> = []</dl>
+
 </td></tr></table> <p>
 <table class="section">
 <tr class="decor title-decor heading-text">
@@ -101,8 +103,6 @@ Methods defined here:<br>
 Data and other attributes defined here:<br>
 <dl><dt><strong>count</strong> = 0</dl>
 
-<dl><dt><strong>date_of_registration</strong> = ''</dl>
-
 <hr>
 Static methods inherited from <a href="test.html#Jarmu">Jarmu</a>:<br>
 <dl><dt><a name="auto-day_of_registration"><strong>day_of_registration</strong></a>()</dt></dl>
@@ -118,6 +118,8 @@ Data descriptors inherited from <a href="test.html#Jarmu">Jarmu</a>:<br>
 <hr>
 Data and other attributes inherited from <a href="test.html#Jarmu">Jarmu</a>:<br>
 <dl><dt><strong>company_vehicles</strong> = 0</dl>
+
+<dl><dt><strong>reg_dates</strong> = []</dl>
 
 </td></tr></table> <p>
 <table class="section">
@@ -145,8 +147,6 @@ Methods defined here:<br>
 Data and other attributes defined here:<br>
 <dl><dt><strong>count</strong> = 0</dl>
 
-<dl><dt><strong>date_of_registration</strong> = ''</dl>
-
 <hr>
 Static methods inherited from <a href="test.html#Jarmu">Jarmu</a>:<br>
 <dl><dt><a name="bicikli-day_of_registration"><strong>day_of_registration</strong></a>()</dt></dl>
@@ -163,16 +163,22 @@ Data descriptors inherited from <a href="test.html#Jarmu">Jarmu</a>:<br>
 Data and other attributes inherited from <a href="test.html#Jarmu">Jarmu</a>:<br>
 <dl><dt><strong>company_vehicles</strong> = 0</dl>
 
+<dl><dt><strong>reg_dates</strong> = []</dl>
+
 </td></tr></table></td></tr></table><p>
 <table class="section">
 <tr class="decor functions-decor heading-text">
 <td class="section-title" colspan=3>&nbsp;<br><strong class="bigsection">Functions</strong></td></tr>
     
 <tr><td class="decor functions-decor"><span class="code">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></td><td>&nbsp;</td>
-<td class="singlecolumn"><dl><dt><a name="-content"><strong>content</strong></a>(parent='current working directory')</dt><dd><span class="code">This&nbsp;method&nbsp;does&nbsp;not&nbsp;require&nbsp;a&nbsp;parent&nbsp;directory&nbsp;as&nbsp;argumentum,&nbsp;because&nbsp;its&nbsp;default&nbsp;directory&nbsp;is&nbsp;the&nbsp;current&nbsp;working&nbsp;directory.<br>
-The&nbsp;default&nbsp;value&nbsp;is&nbsp;a&nbsp;method&nbsp;which&nbsp;returns&nbsp;to&nbsp;the&nbsp;current&nbsp;WindowsPath&nbsp;directly,&nbsp;and&nbsp;the&nbsp;result&nbsp;of&nbsp;the&nbsp;content&nbsp;method&nbsp;is&nbsp;<br>
-a&nbsp;return&nbsp;value&nbsp;of&nbsp;one&nbsp;dictionary&nbsp;with&nbsp;directories&nbsp;as&nbsp;keys&nbsp;and&nbsp;every&nbsp;subfolder&nbsp;and&nbsp;file&nbsp;as&nbsp;values.</span></dd></dl>
- <dl><dt><a name="-read_files"><strong>read_files</strong></a>(dirs='directories')</dt><dd><span class="code">This&nbsp;method&nbsp;requires&nbsp;the&nbsp;<a href="#-content">content</a>()&nbsp;<a href="builtins.html#object">object</a>'s&nbsp;result&nbsp;and&nbsp;generate&nbsp;the&nbsp;open()&nbsp;objects&nbsp;by&nbsp;using&nbsp;the&nbsp;yield&nbsp;statement&nbsp;and&nbsp;the&nbsp;read()&nbsp;method.<br>
-So&nbsp;the&nbsp;returned&nbsp;values&nbsp;are&nbsp;the&nbsp;data&nbsp;from&nbsp;every&nbsp;file&nbsp;in&nbsp;every&nbsp;folder&nbsp;under&nbsp;the&nbsp;parent&nbsp;directory.</span></dd></dl>
+<td class="singlecolumn"><dl><dt><a name="-content"><strong>content</strong></a>(parent='current working directory')</dt><dd><span class="code">This&nbsp;method&nbsp;does&nbsp;not&nbsp;require&nbsp;a&nbsp;parent&nbsp;directory&nbsp;as&nbsp;argumentum,<br>
+because&nbsp;its&nbsp;default&nbsp;directory&nbsp;is&nbsp;the&nbsp;current&nbsp;working&nbsp;directory.<br>
+The&nbsp;default&nbsp;value&nbsp;is&nbsp;a&nbsp;method&nbsp;which&nbsp;returns&nbsp;to&nbsp;the&nbsp;current&nbsp;WindowsPath<br>
+directly,&nbsp;and&nbsp;the&nbsp;result&nbsp;of&nbsp;the&nbsp;content&nbsp;method&nbsp;is&nbsp;a&nbsp;return&nbsp;value&nbsp;of&nbsp;<br>
+one&nbsp;dictionary&nbsp;with&nbsp;directories&nbsp;as&nbsp;keys&nbsp;and&nbsp;every&nbsp;subfolder&nbsp;and&nbsp;file&nbsp;as&nbsp;values.</span></dd></dl>
+ <dl><dt><a name="-read_files"><strong>read_files</strong></a>(dirs='directories')</dt><dd><span class="code">This&nbsp;method&nbsp;requires&nbsp;the&nbsp;<a href="#-content">content</a>()&nbsp;<a href="builtins.html#object">object</a>'s&nbsp;result&nbsp;and&nbsp;generate&nbsp;the&nbsp;open()<br>
+objects&nbsp;by&nbsp;using&nbsp;the&nbsp;yield&nbsp;statement&nbsp;and&nbsp;the&nbsp;read()&nbsp;method.<br>
+So&nbsp;the&nbsp;returned&nbsp;values&nbsp;are&nbsp;the&nbsp;data&nbsp;from&nbsp;every&nbsp;file&nbsp;in&nbsp;every&nbsp;folder<br>
+under&nbsp;the&nbsp;parent&nbsp;directory.</span></dd></dl>
 </td></tr></table>
 </body></html>
