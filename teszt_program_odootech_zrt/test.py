@@ -6,7 +6,6 @@ import datetime
 from my_python.runtime import timer
 
 def content(parent='current working directory'):
-    
     '''
     This method does not require a parent directory as argumentum,
     because its default directory is the current working directory.
@@ -16,7 +15,6 @@ def content(parent='current working directory'):
     '''
     
 def read_files(dirs='directories'):
-    
     '''
     This method requires the content() object's result and generate the open()
     objects by using the yield statement and the read() method.
