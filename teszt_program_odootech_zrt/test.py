@@ -28,15 +28,12 @@ class Jarmu:
     '''
     This is a parent/superclass of auto and
     bicikli subclasses. It is instantiated by
-    type (auto or bicikli) and marka (anything) and the counter
-    increases everytime an object is being created and also 
-    the registration date recorded.
+    type (auto or bicikli) and the counter
+    increases everytime an object is being created.
     '''
     company_vehicles = 0
-    reg_dates = []
-    def __init__(self, type: str, marka: str) -> None:
+    def __init__(self, type: str) -> None:
         self.type = type
-        self.marka = marka
         
     @staticmethod
     def day_of_registration():
@@ -47,30 +44,31 @@ class Jarmu:
 class auto(Jarmu):
     '''
     This is a subclass of Jarmu superclass.
-    It is instantiated by type, marka and ajtok_szama.
+    It is instantiated by marka and ajtok_szama.
     The counter of auto and Jarmu increases everytime
     the object is created.
     '''
     count = 0
     
-    def __init__(self, type: str, marka: str, ajtok_szama: int) -> None:
-        super().__init__(type, marka)
+    def __init__(self, marka: str, ajtok_szama: int) -> None:
+        Jarmu.__init__(self, 'auto')
+        self.marka = marka
         self.ajtok_szama = ajtok_szama
         auto.count += 1
         Jarmu.company_vehicles += 1
-        Jarmu.reg_dates.append(str(datetime.datetime.now())[:10])
         
 class bicikli(Jarmu):
     '''
     This is a subclass of Jarmu parent class.
-    It is instantiated by type, marka and terhelhetoseg.
+    It is instantiated by marka and terhelhetoseg.
     The counter of bicikli and Jarmu increases everytime
     the object is created.
     '''
     count = 0 
     
-    def __init__(self, type: str, marka: str, terhelhetoseg: int) -> None:
-        super().__init__(type, marka)
+    def __init__(self, marka: str, terhelhetoseg: int) -> None:
+        Jarmu.__init__(self, 'bicikli')
+        self.marka = marka
         self.terhelhetoseg = terhelhetoseg
         bicikli.count +=1
         Jarmu.company_vehicles +=1

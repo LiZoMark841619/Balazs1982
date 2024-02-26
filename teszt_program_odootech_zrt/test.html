@@ -48,16 +48,15 @@
 <td class="section-title" colspan=3>&nbsp;<br><a name="Jarmu">class <strong>Jarmu</strong></a>(<a href="builtins.html#object">builtins.object</a>)</td></tr>
     
 <tr><td class="decor title-decor" rowspan=2><span class="code">&nbsp;&nbsp;&nbsp;</span></td>
-<td class="decor title-decor" colspan=2><span class="code"><a href="#Jarmu">Jarmu</a>(type:&nbsp;str,&nbsp;marka:&nbsp;str)&nbsp;-&amp;gt;&nbsp;None<br>
+<td class="decor title-decor" colspan=2><span class="code"><a href="#Jarmu">Jarmu</a>(type:&nbsp;str)&nbsp;-&amp;gt;&nbsp;None<br>
 &nbsp;<br>
 This&nbsp;is&nbsp;a&nbsp;parent/superclass&nbsp;of&nbsp;<a href="#auto">auto</a>&nbsp;and<br>
 <a href="#bicikli">bicikli</a>&nbsp;subclasses.&nbsp;It&nbsp;is&nbsp;instantiated&nbsp;by<br>
-type&nbsp;(<a href="#auto">auto</a>&nbsp;or&nbsp;<a href="#bicikli">bicikli</a>)&nbsp;and&nbsp;marka&nbsp;(anything)&nbsp;and&nbsp;the&nbsp;counter<br>
-increases&nbsp;everytime&nbsp;an&nbsp;<a href="builtins.html#object">object</a>&nbsp;is&nbsp;being&nbsp;created&nbsp;and&nbsp;also&nbsp;<br>
-the&nbsp;registration&nbsp;date&nbsp;recorded.<br>&nbsp;</span></td></tr>
+type&nbsp;(<a href="#auto">auto</a>&nbsp;or&nbsp;<a href="#bicikli">bicikli</a>)&nbsp;and&nbsp;the&nbsp;counter<br>
+increases&nbsp;everytime&nbsp;an&nbsp;<a href="builtins.html#object">object</a>&nbsp;is&nbsp;being&nbsp;created.<br>&nbsp;</span></td></tr>
 <tr><td>&nbsp;</td>
 <td class="singlecolumn">Methods defined here:<br>
-<dl><dt><a name="Jarmu-__init__"><strong>__init__</strong></a>(self, type: str, marka: str) -&gt; None</dt><dd><span class="code">Initialize&nbsp;self.&nbsp;&nbsp;See&nbsp;help(type(self))&nbsp;for&nbsp;accurate&nbsp;signature.</span></dd></dl>
+<dl><dt><a name="Jarmu-__init__"><strong>__init__</strong></a>(self, type: str) -&gt; None</dt><dd><span class="code">Initialize&nbsp;self.&nbsp;&nbsp;See&nbsp;help(type(self))&nbsp;for&nbsp;accurate&nbsp;signature.</span></dd></dl>
 
 <hr>
 Static methods defined here:<br>
@@ -75,18 +74,16 @@ Data descriptors defined here:<br>
 Data and other attributes defined here:<br>
 <dl><dt><strong>company_vehicles</strong> = 0</dl>
 
-<dl><dt><strong>reg_dates</strong> = []</dl>
-
 </td></tr></table> <p>
 <table class="section">
 <tr class="decor title-decor heading-text">
 <td class="section-title" colspan=3>&nbsp;<br><a name="auto">class <strong>auto</strong></a>(<a href="test.html#Jarmu">Jarmu</a>)</td></tr>
     
 <tr><td class="decor title-decor" rowspan=2><span class="code">&nbsp;&nbsp;&nbsp;</span></td>
-<td class="decor title-decor" colspan=2><span class="code"><a href="#auto">auto</a>(type:&nbsp;str,&nbsp;marka:&nbsp;str,&nbsp;ajtok_szama:&nbsp;int)&nbsp;-&amp;gt;&nbsp;None<br>
+<td class="decor title-decor" colspan=2><span class="code"><a href="#auto">auto</a>(marka:&nbsp;str,&nbsp;ajtok_szama:&nbsp;int)&nbsp;-&amp;gt;&nbsp;None<br>
 &nbsp;<br>
 This&nbsp;is&nbsp;a&nbsp;subclass&nbsp;of&nbsp;<a href="#Jarmu">Jarmu</a>&nbsp;superclass.<br>
-It&nbsp;is&nbsp;instantiated&nbsp;by&nbsp;type,&nbsp;marka&nbsp;and&nbsp;ajtok_szama.<br>
+It&nbsp;is&nbsp;instantiated&nbsp;by&nbsp;marka&nbsp;and&nbsp;ajtok_szama.<br>
 The&nbsp;counter&nbsp;of&nbsp;<a href="#auto">auto</a>&nbsp;and&nbsp;<a href="#Jarmu">Jarmu</a>&nbsp;increases&nbsp;everytime<br>
 the&nbsp;<a href="builtins.html#object">object</a>&nbsp;is&nbsp;created.<br>&nbsp;</span></td></tr>
 <tr><td>&nbsp;</td>
@@ -97,7 +94,7 @@ the&nbsp;<a href="builtins.html#object">object</a>&nbsp;is&nbsp;created.<br>&nbs
 </dl>
 <hr>
 Methods defined here:<br>
-<dl><dt><a name="auto-__init__"><strong>__init__</strong></a>(self, type: str, marka: str, ajtok_szama: int) -&gt; None</dt><dd><span class="code">Initialize&nbsp;self.&nbsp;&nbsp;See&nbsp;help(type(self))&nbsp;for&nbsp;accurate&nbsp;signature.</span></dd></dl>
+<dl><dt><a name="auto-__init__"><strong>__init__</strong></a>(self, marka: str, ajtok_szama: int) -&gt; None</dt><dd><span class="code">Initialize&nbsp;self.&nbsp;&nbsp;See&nbsp;help(type(self))&nbsp;for&nbsp;accurate&nbsp;signature.</span></dd></dl>
 
 <hr>
 Data and other attributes defined here:<br>
@@ -119,18 +116,16 @@ Data descriptors inherited from <a href="test.html#Jarmu">Jarmu</a>:<br>
 Data and other attributes inherited from <a href="test.html#Jarmu">Jarmu</a>:<br>
 <dl><dt><strong>company_vehicles</strong> = 0</dl>
 
-<dl><dt><strong>reg_dates</strong> = []</dl>
-
 </td></tr></table> <p>
 <table class="section">
 <tr class="decor title-decor heading-text">
 <td class="section-title" colspan=3>&nbsp;<br><a name="bicikli">class <strong>bicikli</strong></a>(<a href="test.html#Jarmu">Jarmu</a>)</td></tr>
     
 <tr><td class="decor title-decor" rowspan=2><span class="code">&nbsp;&nbsp;&nbsp;</span></td>
-<td class="decor title-decor" colspan=2><span class="code"><a href="#bicikli">bicikli</a>(type:&nbsp;str,&nbsp;marka:&nbsp;str,&nbsp;terhelhetoseg:&nbsp;int)&nbsp;-&amp;gt;&nbsp;None<br>
+<td class="decor title-decor" colspan=2><span class="code"><a href="#bicikli">bicikli</a>(marka:&nbsp;str,&nbsp;terhelhetoseg:&nbsp;int)&nbsp;-&amp;gt;&nbsp;None<br>
 &nbsp;<br>
 This&nbsp;is&nbsp;a&nbsp;subclass&nbsp;of&nbsp;<a href="#Jarmu">Jarmu</a>&nbsp;parent&nbsp;class.<br>
-It&nbsp;is&nbsp;instantiated&nbsp;by&nbsp;type,&nbsp;marka&nbsp;and&nbsp;terhelhetoseg.<br>
+It&nbsp;is&nbsp;instantiated&nbsp;by&nbsp;marka&nbsp;and&nbsp;terhelhetoseg.<br>
 The&nbsp;counter&nbsp;of&nbsp;<a href="#bicikli">bicikli</a>&nbsp;and&nbsp;<a href="#Jarmu">Jarmu</a>&nbsp;increases&nbsp;everytime<br>
 the&nbsp;<a href="builtins.html#object">object</a>&nbsp;is&nbsp;created.<br>&nbsp;</span></td></tr>
 <tr><td>&nbsp;</td>
@@ -141,7 +136,7 @@ the&nbsp;<a href="builtins.html#object">object</a>&nbsp;is&nbsp;created.<br>&nbs
 </dl>
 <hr>
 Methods defined here:<br>
-<dl><dt><a name="bicikli-__init__"><strong>__init__</strong></a>(self, type: str, marka: str, terhelhetoseg: int) -&gt; None</dt><dd><span class="code">Initialize&nbsp;self.&nbsp;&nbsp;See&nbsp;help(type(self))&nbsp;for&nbsp;accurate&nbsp;signature.</span></dd></dl>
+<dl><dt><a name="bicikli-__init__"><strong>__init__</strong></a>(self, marka: str, terhelhetoseg: int) -&gt; None</dt><dd><span class="code">Initialize&nbsp;self.&nbsp;&nbsp;See&nbsp;help(type(self))&nbsp;for&nbsp;accurate&nbsp;signature.</span></dd></dl>
 
 <hr>
 Data and other attributes defined here:<br>
@@ -162,8 +157,6 @@ Data descriptors inherited from <a href="test.html#Jarmu">Jarmu</a>:<br>
 <hr>
 Data and other attributes inherited from <a href="test.html#Jarmu">Jarmu</a>:<br>
 <dl><dt><strong>company_vehicles</strong> = 0</dl>
-
-<dl><dt><strong>reg_dates</strong> = []</dl>
 
 </td></tr></table></td></tr></table><p>
 <table class="section">
