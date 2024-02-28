@@ -24,14 +24,13 @@ def read_files(dirs='directories'):
     
 class Jarmu:
     '''
-    This is a parent/superclass of auto and
-    bicikli subclasses. It is instantiated by
-    type (auto or bicikli) and the counter
-    increases everytime an object is being created.
+    This is a parent/superclass of auto and bicikli subclasses. It is instantiated by
+    type (auto or bicikli) and the counter increases everytime an object is being created.
     '''
     company_vehicles = 0
     def __init__(self, type: str) -> None:
         self.type = type
+        Jarmu.company_vehicles += 1
         
     @staticmethod
     def day_of_registration():
@@ -41,10 +40,8 @@ class Jarmu:
     
 class auto(Jarmu):
     '''
-    This is a subclass of Jarmu superclass.
-    It is instantiated by marka and ajtok_szama.
-    The counter of auto and Jarmu increases everytime
-    the object is created.
+    This is a subclass of Jarmu superclass. It is instantiated by marka and ajtok_szama.
+    The counter of auto and Jarmu increases everytime the object is created.
     '''
     count = 0
     
@@ -53,14 +50,12 @@ class auto(Jarmu):
         self.marka = marka
         self.ajtok_szama = ajtok_szama
         auto.count += 1
-        Jarmu.company_vehicles += 1
+        
         
 class bicikli(Jarmu):
     '''
-    This is a subclass of Jarmu parent class.
-    It is instantiated by marka and terhelhetoseg.
-    The counter of bicikli and Jarmu increases everytime
-    the object is created.
+    This is a subclass of Jarmu parent class. It is instantiated by marka and terhelhetoseg.
+    The counter of bicikli and Jarmu increases everytime the object is created.
     '''
     count = 0 
     
@@ -69,8 +64,6 @@ class bicikli(Jarmu):
         self.marka = marka
         self.terhelhetoseg = terhelhetoseg
         bicikli.count +=1
-        Jarmu.company_vehicles +=1
-
 
 pydoc.writedoc('test')
 
