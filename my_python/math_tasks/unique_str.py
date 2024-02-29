@@ -1,4 +1,6 @@
-def unique(string: str) -> bool:
+def unique(string: str=None) -> bool:
+    if not string:
+        raise ValueError('Only valid string accepted: ')
     for i in range(len(string)):
         for target in string[i+1:]:
             if string[i] == target:
