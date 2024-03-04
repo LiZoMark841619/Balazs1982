@@ -1,6 +1,6 @@
 
 def classtree(cls, indent):
-    print('.'*indent, cls.__name__)
+    print('-'*indent, cls.__name__)
     for supercls in cls.__bases__:
         classtree(supercls, indent+3)
 
