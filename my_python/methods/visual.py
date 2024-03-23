@@ -35,7 +35,7 @@ def pie_and_countplot(features: list, dataframe: pd.DataFrame) -> plt:
             else:
                 sns.countplot(y=feat, data=dataframe, saturation=0.75, hue='sex', order= dataframe[feat].value_counts().index)
                 plt.xticks(rotation=15)
-            plt.show()
+        plt.show()
     
 def histogram(features:list, dataframe: pd.DataFrame) -> plt:
     for feat in features:
