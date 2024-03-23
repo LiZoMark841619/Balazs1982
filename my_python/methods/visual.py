@@ -27,7 +27,7 @@ def pie_and_countplot(features: list, dataframe: pd.DataFrame) -> plt:
         if data.dtype == 'object':
             plt.figure(figsize=[10, 7])
             sns.set_palette('dark')
-            plt.title(f'Distribution of {feat} of {len(data)} participants', fontsize = 14)
+            plt.title(f'Distribution of {feat} of {len(data)} participants', fontsize = 16)
             if data.nunique() < 5:
                 plt.pie(data.value_counts(), autopct='%d%%', pctdistance=0.85, explode=[0.035 for _ in range(data.nunique())], textprops={'color':'white'})
                 plt.legend(data.unique(), loc='center')
@@ -43,7 +43,7 @@ def histogram(features:list, dataframe: pd.DataFrame) -> plt:
         if data.dtype in ['int64', 'float64']:
             plt.figure(figsize=[10, 7])
             sns.set_palette('dark')
-            plt.title(f'Distribution of {feat} of {len(data)} participants', fontsize=14)
+            plt.title(f'Distribution of {feat} of {len(data)} participants', fontsize=16)
             sns.histplot(x=feat, data=dataframe, hue='sex', bins=30)
             mean = np.mean(data).round()
             plt.axvline(mean, color='red')
