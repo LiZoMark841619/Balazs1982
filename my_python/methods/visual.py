@@ -21,9 +21,9 @@ def list_replacement(df: pd.DataFrame, feature: str, old_values: list, new_value
         df[feature] = df[feature].replace(old_values[i], new_values[i])
     return df[feature]
 
-def pie_and_countplot(features: list, dataframe: pd.DataFrame, sep: str = 'sex') -> plt:
+def pie_and_countplot(features: list, df: pd.DataFrame, sep: str = 'sex') -> plt:
     for feat in features:
-        data = dataframe[feat]
+        data = df[feat]
         if data.dtype == 'object':
             plt.figure(figsize=[10, 7])
             sns.set_palette('dark')
@@ -33,18 +33,18 @@ def pie_and_countplot(features: list, dataframe: pd.DataFrame, sep: str = 'sex')
                 plt.legend(data.unique(), loc='center')
                 plt.gcf().gca().add_artist(plt.Circle((0, 0), 0.7, facecolor='white'))
             else:
-                sns.countplot(y=feat, data=dataframe, saturation=0.75, hue=sep, order= dataframe[feat].value_counts().index)
+                sns.countplot(y=feat, data=df, saturation=0.75, hue=sep, order= df[feat].value_counts().index)
                 plt.xticks(rotation=15)
         plt.show()
     
-def histogram(features:list, dataframe: pd.DataFrame, sep: str = 'sex') -> plt:
+def histogram(features:list, df: pd.DataFrame, sep: str = 'sex') -> plt:
     for feat in features:
-        data = dataframe[feat]
+        data = df[feat]
         if data.dtype in ['int64', 'float64']:
             plt.figure(figsize=[10, 7])
             sns.set_palette('dark')
             plt.title(f'Distribution of {feat} of {len(data)} participants', fontsize=16)
-            sns.histplot(x=feat, data=dataframe, hue=sep, bins=30)
+            sns.histplot(x=feat, data=df, hue=sep, bins=30)
             mean = np.mean(data).round()
             plt.axvline(mean, color='red')
             plt.text(x=mean*1.1, y=7000, s=f'Mean: {mean}')
