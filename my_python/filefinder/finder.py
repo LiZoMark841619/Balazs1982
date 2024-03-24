@@ -8,10 +8,10 @@ while True:
     target = []
     
     for roots, dirs, files in os.walk(top=pathlib.Path.cwd(), topdown=True):
-        target = [file for file in files if file[-4:] == file_suffix]
-    if file_suffix in file_options and target: break
+        target = [file for file in files if file_suffix in file]
+        
+    if (file_suffix in file_options) and (target): break
     else: print(f'Sorry, there is no such file with {file_suffix} suffix, try another one! ')
-    continue
 
 while True:
     answer = input(f'Please enter a valid filename from {target} files to load in and make a pandas dataframe! ')
