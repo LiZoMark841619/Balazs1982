@@ -22,3 +22,16 @@ while True:
         elif '.sql' in answer: df = pd.read_sql(answer); break
             
 print(f'GOOD JOB! You have just transformed {answer} into a pandas DataFrame.\n')
+
+print('\nIf you would like to have info enter "info", if description enter "desc", if both enter "both", if neither enter "None"! ')
+descr = '\nDescriptive statistic data of numerical variables'
+summary = '\nYou can see above that the height and the income columns have invalid data.'
+
+while True:
+    options = ["info", "desc", "both", "None"]
+    answer = input(f'Please pick a valid option from {options}! ')
+    
+    if answer == "info": print(df.info()); break
+    elif answer == "desc": print('-'*50,descr,'\n','-'*50,'\n',df.describe(),summary); break
+    elif answer == "both": print(df.info(),'\n',descr,df.describe(),summary); break
+    elif answer == "None": break
