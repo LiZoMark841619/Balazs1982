@@ -35,3 +35,4 @@ while True:
     elif answer == "desc": print('-'*50,descr,'\n','-'*50,'\n',df.describe(),summary); break
     elif answer == "both": print(df.info(),'\n',descr,df.describe(),summary); break
     elif answer == "None": break
+
