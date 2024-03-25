@@ -1,34 +1,36 @@
 class Adder:
     
-    def add(self, x, y):
+    def add(self, y):
         print('Not implemented')
         
-    def __init__(self, data=None):
-        if data is None:
-            data = []
-            self.data = data
+    def __init__(self, start=[]):
+        self.data = start
         
-    def __add__(self, y):
-        self.add(self.x, y)
+    def __add__(self, other):
+        return self.add(other)
         
 class ListAdder(Adder):
-    def add(self, x, y):
-        return x + y
+    def add(self, y):
+        return self.data + y
 
 class DictAdder(Adder):
-    def add(self, x, y):
-        return {k:x[k] for k in x} | {k:y[k] for k in y}
+    def add(self, y):
+        return {k:self.data[k] for k in self.data} | {k:y[k] for k in y}
 
 class Mylist:
     pass
     
-    
-
 if __name__ == '__main__':
-    Adder().add(10, 20)
-    Adder() + ['Hallo', 'Balazs']
-    print(ListAdder().add([1], [2]))
-    print(ListAdder().add(1, 2))
-    print(ListAdder().add('Hey', 'Balazs'))
-    x = DictAdder()
-    print(x.add({1:1}, {2:2}))
+    Adder(10).add(20)
+    Adder('Hallo') + 'Balazs'
+    print(ListAdder([1]).add([2]))
+    print(ListAdder(1).add(2))
+    print(ListAdder('Hey').add('Balazs'))
+    x = DictAdder({'start':0})
+    z = x + {'end':100}
+    print(z)
+    print(x.add({'new_end':50}))
+    D = DictAdder({0:'start'})
+    E = D + {i-96:chr(i) for i in range(97, 97+26)}
+    F = DictAdder(E) + {27:'end'}
+    print(F)
