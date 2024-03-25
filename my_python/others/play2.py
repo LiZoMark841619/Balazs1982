@@ -1,13 +1,13 @@
 class Adder:
-    
-    def add(self, y):
-        print('Not implemented')
-        
+  
     def __init__(self, start=[]):
         self.data = start
         
     def __add__(self, other):
         return self.add(other)
+    
+    def add(self, y):
+        print('Not implemented')
         
 class ListAdder(Adder):
     def add(self, y):
