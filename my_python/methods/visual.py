@@ -44,10 +44,16 @@ def histogram(features:list, df: pd.DataFrame, sep: str = 'sex' or None) -> plt:
             plt.figure(figsize=[10, 7])
             sns.set_palette('dark')
             plt.title(f'Distribution of {feat} of {len(data)} participants', fontsize=16)
-            sns.histplot(x=feat, data=df, hue=sep, bins=30)
-            mean = np.mean(data).round()
-            plt.axvline(mean, color='red')
-            plt.text(x=mean*1.1, y=7000, s=f'Mean: {mean}')
+            if sep is not None:
+                sns.boxplot(y=sep, x=feat, data=df)
+                plt.show()
+                plt.clf()
+                sns.histplot(x=feat, data=df, hue=sep, bins=30)
+            else:
+                sns.histplot(x=feat, data=df, hue=sep, bins=30)
+                mean = np.mean(data).round()
+                plt.axvline(mean, color='red')
+                plt.text(x=mean*1.1, y=7000, s=f'Mean: {mean}')
             plt.show()
 
 
