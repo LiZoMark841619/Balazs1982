@@ -3,7 +3,7 @@ import os
 import pandas as pd
 
 while True:
-    file_options = ['.csv', '.excel', '.sql']
+    file_options = ['.csv', 'xlsx', '.sql']
     file_suffix = input(f'Enter a valid suffix from {file_options} options to search for those files! ')
     target = []
     
@@ -18,7 +18,7 @@ while True:
     
     if answer in target: 
         if '.csv' in answer: df = pd.read_csv(answer, encoding='utf-8'); break
-        elif '.excel' in answer: df = pd.read_excel(answer); break
+        elif 'xlsx' in answer: df = pd.read_excel(answer); break
         elif '.sql' in answer: df = pd.read_sql(answer); break
             
 print(f'GOOD JOB! You have just transformed {answer} into a pandas DataFrame.\n')
