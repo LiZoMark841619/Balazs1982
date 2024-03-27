@@ -4,24 +4,24 @@ import seaborn as sns
 import numpy as np
 from itertools import product as prod
 
-def unique_and_fill(features: list, df: pd.DataFrame) -> any:
+def unique_and_fill(features: list, df: pd.DataFrame) -> iter:
     for feature in features:
         if df[feature].dtype not in ['int64', 'float64']:
             df[feature] = df[feature].fillna('unknown')
         yield feature, df[feature].unique()
 
-def change_values(new_values: list, df: pd.DataFrame, feature: str) -> pd.DataFrame:
+def change_values(new_values: list, df: pd.DataFrame, feature: str) -> pd.Series:
     for value, element in prod(new_values, df[feature].unique()):
         if value in element:
             df[feature] = df[feature].replace(element, value)
     return df[feature]
 
-def list_replacement(df: pd.DataFrame, feature: str, old_values: list, new_values: list) -> pd.DataFrame:
+def list_replacement(df: pd.DataFrame, feature: str, old_values: list, new_values: list) -> pd.Series:
     for i in range(len(old_values)):
         df[feature] = df[feature].replace(old_values[i], new_values[i])
     return df[feature]
 
-def pie_and_countplot(features: list, df: pd.DataFrame, sep: str = 'sex') -> plt:
+def pie_and_countplot(features: list, df: pd.DataFrame, sep: str = 'sex' or None) -> plt:
     for feat in features:
         data = df[feat]
         if data.dtype == 'object':
@@ -37,7 +37,7 @@ def pie_and_countplot(features: list, df: pd.DataFrame, sep: str = 'sex') -> plt
                 plt.xticks(rotation=15)
         plt.show()
     
-def histogram(features:list, df: pd.DataFrame, sep: str = 'sex') -> plt:
+def histogram(features:list, df: pd.DataFrame, sep: str = 'sex' or None) -> plt:
     for feat in features:
         data = df[feat]
         if data.dtype in ['int64', 'float64']:

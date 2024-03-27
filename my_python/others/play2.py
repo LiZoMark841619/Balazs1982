@@ -23,6 +23,7 @@ if __name__ == '__main__':
     Adder(10).add(20)
     Adder('Hallo') + 'Balazs'
     print(ListAdder([1]).add([2]))
+    print(ListAdder([1]) + [2])
     print(ListAdder(1).add(2))
     print(ListAdder('Hey').add('Balazs'))
     x = DictAdder({'start':0})
